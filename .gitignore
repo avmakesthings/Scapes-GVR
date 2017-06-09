@@ -5,6 +5,11 @@
 /[Bb]uilds/
 /Assets/AssetStoreTools*
 
+# Custom
+/Assets/_Audio
+/[Aa]udio/
+/[Dd]esign/
+
 # Visual Studio 2015 cache directory
 /.vs/
 
