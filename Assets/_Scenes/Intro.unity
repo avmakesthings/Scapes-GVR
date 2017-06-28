@@ -2326,6 +2326,10 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11414954, guid: 970dd4b9371394fb4890965f608d46fd, type: 2}
+      propertyPath: vrModeEnabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 970dd4b9371394fb4890965f608d46fd, type: 2}
   m_IsPrefabParent: 0
@@ -3194,15 +3198,15 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 9b45880b36dd341a49c3191dbd69d9a8, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 74c46887d7bca4277a37a7124039ff90, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.538
+  m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 84
+  Priority: 250
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -6652,11 +6656,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 2d7f7a248d9284e7ab34492984a0b70a, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 2d7f7a248d9284e7ab34492984a0b70a, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 2d7f7a248d9284e7ab34492984a0b70a, type: 3}
       propertyPath: m_IsActive

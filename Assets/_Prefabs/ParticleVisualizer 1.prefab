@@ -470,7 +470,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 5000
+    maxNumParticles: 50
     size3D: 1
     rotation3D: 1
     gravityModifier:
@@ -517,7 +517,7 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 4
     enabled: 1
-    type: 13
+    type: 6
     angle: 25
     length: 5
     boxX: 1
@@ -614,7 +614,7 @@ ParticleSystem:
           m_PostInfinity: 2
           m_RotationOrder: 4
     placementMode: 0
-    m_Mesh: {fileID: 0}
+    m_Mesh: {fileID: 4300002, guid: c927d61018ab64719841638af7dbcbe2, type: 3}
     m_MeshRenderer: {fileID: 0}
     m_SkinnedMeshRenderer: {fileID: 0}
     m_MeshMaterialIndex: 0
@@ -2382,7 +2382,7 @@ ParticleSystem:
         m_RotationOrder: 4
     maxLights: 20
   TrailModule:
-    enabled: 0
+    enabled: 1
     ratio: 1
     lifetime:
       serializedVersion: 2
@@ -2498,7 +2498,7 @@ ParticleSystem:
     widthOverTrail:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.1
+      scalar: 10
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -3073,8 +3073,8 @@ ParticleSystemRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 2100000, guid: 5a81a7795b87845f6a75335d83ae1f0b, type: 2}
+  - {fileID: 2100000, guid: c91cdb740b791451a9fc43f2e3198914, type: 2}
+  - {fileID: 2100000, guid: c91cdb740b791451a9fc43f2e3198914, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -16,6 +16,10 @@ public class AudioParticles : MonoBehaviour {
 	Vector3 randomPointAB;
 
 	Vector3 currentPoint;
+
+	bool isRunning;
+
+	private Vector3 velocity = Vector3.zero;
 	
 	ParticleSystem a ;
 
@@ -43,11 +47,15 @@ public class AudioParticles : MonoBehaviour {
 		float audioInput = AudioPeer.audioBandBuffer[0];
 		
 
-		if(audioInput>=0.7f){
-			assignPoint();
-			findNextPoint();
+		if(audioInput>=1f && audioInput<= 1.1f && !isRunning){
+			// assignPoint();
+			// findNextPoint();
+			StartCoroutine("changePosition");
+			print(audioInput);
 			
-		}		
+		}
+		
+				
 	}
 
 	
@@ -60,9 +68,18 @@ public class AudioParticles : MonoBehaviour {
 	}
 	
 	void assignPoint(){
-		a.transform.position = randomPointAB;
+		
+		transform.position = Vector3.SmoothDamp(randomPointAB, currentPoint , ref velocity, 200f);
+		//a.transform.position = randomPointAB;
 		currentPoint = randomPointAB;
 	}
 
+	IEnumerator changePosition() {
+		isRunning = true;
+		assignPoint();
+		findNextPoint();
+		yield return new WaitForSeconds(10f);
+		isRunning = false;
+	}
 
 }

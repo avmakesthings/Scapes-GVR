@@ -20,7 +20,7 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.9191176, g: 0.2703287, b: 0.8475271, a: 1}
+  m_AmbientSkyColor: {r: 0, g: 0.2703287, b: 0.8475271, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
@@ -165,11 +165,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ea2c84dc4b824df68045b57fafa59a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meshes:
-  - {fileID: 3300000, guid: 2fe7addfa2c2e43bdb5e27daaa9c1a59, type: 3}
-  - {fileID: 3300002, guid: 2fe7addfa2c2e43bdb5e27daaa9c1a59, type: 3}
-  - {fileID: 3300004, guid: 2fe7addfa2c2e43bdb5e27daaa9c1a59, type: 3}
-  - {fileID: 3300006, guid: 2fe7addfa2c2e43bdb5e27daaa9c1a59, type: 3}
 --- !u!4 &300724182
 Transform:
   m_ObjectHideFlags: 0

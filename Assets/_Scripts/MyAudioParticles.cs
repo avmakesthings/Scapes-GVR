@@ -8,6 +8,7 @@ public class MyAudioParticles : MonoBehaviour {
 	public ParticleSystem[] myParticle;
 
 	Vector3 controlGeoCenter;
+	private Vector3 velocity = Vector3.zero;
 
 	ParticleSystem[] a = new ParticleSystem[3];
 
@@ -32,20 +33,23 @@ public class MyAudioParticles : MonoBehaviour {
 		float audioInput = AudioPeer.audioBandBuffer[1];
 
 		if(audioInput>0.7f && audioInput<0.9f ){
-			a[0].transform.position = nextPoint(a[2].transform.position);
+			//a[0].transform.position = nextPoint(a[2].transform.position);
+			a[0].transform.position = Vector3.SmoothDamp(nextPoint(a[2].transform.position), a[0].transform.position , ref velocity, 10f);
 		}
-
+		
 		if(audioInput<0.7f && audioInput>0.6f){
-			a[1].transform.position = nextPoint(a[0].transform.position);
+			//a[1].transform.position = nextPoint(a[0].transform.position);
+			a[1].transform.position = Vector3.SmoothDamp(nextPoint(a[2].transform.position), a[0].transform.position , ref velocity, 10f);
 		}
 
-		if(audioInput<0.5f && audioInput>0.3f){
-			a[2].transform.position = nextPoint(a[1].transform.position);
+		if(audioInput>0.9f && audioInput<1f){
+			//a[2].transform.position = nextPoint(a[1].transform.position);
+			a[2].transform.position = Vector3.SmoothDamp(nextPoint(a[1].transform.position), a[0].transform.position , ref velocity, 30f);
 		}
 
 
 	}
-
+ 
 	
     private static Vector3 RandomPointInBox(Vector3 center, Vector3 size) {
  

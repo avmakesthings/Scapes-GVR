@@ -361,6 +361,88 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!1 &137220627
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 137220631}
+  - component: {fileID: 137220630}
+  - component: {fileID: 137220629}
+  - component: {fileID: 137220628}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!23 &137220628
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 137220627}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: c91cdb740b791451a9fc43f2e3198914, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!65 &137220629
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 137220627}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &137220630
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 137220627}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &137220631
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 137220627}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.91, y: 0.91, z: 11.23}
+  m_LocalScale: {x: 12.181853, y: 2.8403106, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &140987590
 GameObject:
   m_ObjectHideFlags: 0
@@ -2573,6 +2655,18 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 177758, guid: 970dd4b9371394fb4890965f608d46fd, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11414954, guid: 970dd4b9371394fb4890965f608d46fd, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11414954, guid: 970dd4b9371394fb4890965f608d46fd, type: 2}
+      propertyPath: vrModeEnabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 970dd4b9371394fb4890965f608d46fd, type: 2}
   m_IsPrefabParent: 0
@@ -2635,7 +2729,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: fea044ec845da47c9bd1c2638533f484, type: 2}
+  - {fileID: 2100000, guid: a5ca9e3098b7143c08df415c32582870, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2682,16 +2776,15 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 670923353}
-          m_MethodName: set_material
-          m_Mode: 2
+          m_MethodName: set_enabled
+          m_Mode: 6
           m_Arguments:
-            m_ObjectArgument: {fileID: 2100000, guid: 2e6a831c2834b41c5839241821f7e714,
-              type: 2}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
-            m_BoolArgument: 0
+            m_BoolArgument: 1
           m_CallState: 1
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -2700,12 +2793,11 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 670923353}
-          m_MethodName: set_material
-          m_Mode: 2
+          m_MethodName: set_enabled
+          m_Mode: 6
           m_Arguments:
-            m_ObjectArgument: {fileID: 2100000, guid: d9183549d401c43b98738cd7a4ba9e25,
-              type: 2}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -2764,6 +2856,75 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.013491, y: 1.7687345, z: 0.50204766}
   m_Center: {x: 9.330663, y: 4.6366615, z: 9.573896}
+--- !u!23 &677992881 stripped
+MeshRenderer:
+  m_PrefabParentObject: {fileID: 2300004, guid: 4ca9680c578074a7bbf0e230d077db53,
+    type: 3}
+  m_PrefabInternal: {fileID: 1481896820}
+--- !u!114 &677992883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 677992878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 677992881}
+          m_MethodName: set_enabled
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 1
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 677992881}
+          m_MethodName: set_enabled
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 1
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1665381839}
+          m_MethodName: LoadScene
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Triangle
+            m_BoolArgument: 0
+          m_CallState: 1
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &704639367
 GameObject:
   m_ObjectHideFlags: 0
@@ -2823,7 +2984,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: fea044ec845da47c9bd1c2638533f484, type: 2}
+  - {fileID: 2100000, guid: c91cdb740b791451a9fc43f2e3198914, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7056,7 +7217,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: fea044ec845da47c9bd1c2638533f484, type: 2}
+  - {fileID: 2100000, guid: c91cdb740b791451a9fc43f2e3198914, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7861,7 +8022,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  saturation: 0.89
+  saturation: 1.32
   selectiveCc: 0
   selectiveFromColor: {r: 1, g: 1, b: 1, a: 1}
   selectiveToColor: {r: 1, g: 1, b: 1, a: 1}
@@ -7932,7 +8093,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: fea044ec845da47c9bd1c2638533f484, type: 2}
+  - {fileID: 2100000, guid: c91cdb740b791451a9fc43f2e3198914, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8051,7 +8212,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: fea044ec845da47c9bd1c2638533f484, type: 2}
+  - {fileID: 2100000, guid: c91cdb740b791451a9fc43f2e3198914, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8136,7 +8297,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: fea044ec845da47c9bd1c2638533f484, type: 2}
+  - {fileID: 2100000, guid: c91cdb740b791451a9fc43f2e3198914, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8221,7 +8382,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: fea044ec845da47c9bd1c2638533f484, type: 2}
+  - {fileID: 2100000, guid: a5ca9e3098b7143c08df415c32582870, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8376,7 +8537,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: fea044ec845da47c9bd1c2638533f484, type: 2}
+  - {fileID: 2100000, guid: a5ca9e3098b7143c08df415c32582870, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9145,7 +9306,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: fea044ec845da47c9bd1c2638533f484, type: 2}
+  - {fileID: 2100000, guid: c91cdb740b791451a9fc43f2e3198914, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9383,6 +9544,30 @@ Prefab:
     - target: {fileID: 400006, guid: 4ca9680c578074a7bbf0e230d077db53, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300002, guid: 4ca9680c578074a7bbf0e230d077db53, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2e6a831c2834b41c5839241821f7e714, type: 2}
+    - target: {fileID: 2300002, guid: 4ca9680c578074a7bbf0e230d077db53, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 4ca9680c578074a7bbf0e230d077db53, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2e6a831c2834b41c5839241821f7e714, type: 2}
+    - target: {fileID: 2300000, guid: 4ca9680c578074a7bbf0e230d077db53, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300004, guid: 4ca9680c578074a7bbf0e230d077db53, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2e6a831c2834b41c5839241821f7e714, type: 2}
+    - target: {fileID: 2300004, guid: 4ca9680c578074a7bbf0e230d077db53, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4ca9680c578074a7bbf0e230d077db53, type: 3}
@@ -9909,7 +10094,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: fea044ec845da47c9bd1c2638533f484, type: 2}
+  - {fileID: 2100000, guid: c91cdb740b791451a9fc43f2e3198914, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10008,11 +10193,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: f26812b0ba5264e3aabbc58ef24b3594, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -12.793017
+      value: -10.53
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: f26812b0ba5264e3aabbc58ef24b3594, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.478918
+      value: -4.89
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: f26812b0ba5264e3aabbc58ef24b3594, type: 3}
       propertyPath: m_LocalRotation.x
@@ -10053,7 +10238,7 @@ Prefab:
     - target: {fileID: 2300000, guid: f26812b0ba5264e3aabbc58ef24b3594, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 435c67fd7e6bf4680994081b4b69aa83, type: 2}
+      objectReference: {fileID: 2100000, guid: 5b9eef5f339774a9cb86ce7d6d6cf93d, type: 2}
     - target: {fileID: 2300000, guid: f26812b0ba5264e3aabbc58ef24b3594, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
@@ -10302,6 +10487,75 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.6906807, y: 1.6906807, z: 0.50204766}
   m_Center: {x: 11.560658, y: 5.767221, z: 9.748978}
+--- !u!23 &1866384741 stripped
+MeshRenderer:
+  m_PrefabParentObject: {fileID: 2300000, guid: 4ca9680c578074a7bbf0e230d077db53,
+    type: 3}
+  m_PrefabInternal: {fileID: 1481896820}
+--- !u!114 &1866384743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1866384738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1866384741}
+          m_MethodName: set_enabled
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 1
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1866384741}
+          m_MethodName: set_enabled
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 1
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1665381839}
+          m_MethodName: LoadScene
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Square
+            m_BoolArgument: 0
+          m_CallState: 1
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &1897408726
 GameObject:
   m_ObjectHideFlags: 0
@@ -10856,7 +11110,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: fea044ec845da47c9bd1c2638533f484, type: 2}
+  - {fileID: 2100000, guid: c91cdb740b791451a9fc43f2e3198914, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
